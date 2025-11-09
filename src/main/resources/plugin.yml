@@ -1,0 +1,4 @@
+name: BetterCompass
+version: '${project.version}'
+main: me.vewa.bettercompass.BetterCompass
+api-version: '1.21'
