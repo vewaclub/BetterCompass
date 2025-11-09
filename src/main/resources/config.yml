@@ -1,0 +1,11 @@
+# automatically hide coordinates on server start
+auto-hide-f3: true
+
+actionbar:
+  enabled: true
+
+  # how often do you want coordinate updates (20 ticks = 1 second)
+  interval-ticks: 5
+
+  # actionbar message format (color codes support)
+  format: "&eX: &f{x}  &aY: &f{y}  &bZ: &f{z}"

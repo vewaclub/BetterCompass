@@ -2,3 +2,21 @@ name: BetterCompass
 version: '${project.version}'
 main: me.vewa.bettercompass.BetterCompass
 api-version: '1.21'
+author: Vewa
+description: Shows coords in actionbar when holding a compass and manages F3 coordinates.
+
+commands:
+  bettercompass:
+    description: BetterCompass main command
+    usage: /bettercompass <reload|on|off>
+    aliases: [bc]
+    permission: bettercompass.admin
+    permission-message: §cYou don't have permissions to execute this command.
+
+permissions:
+  bettercompass.admin:
+    default: op
+  bettercompass.reload:
+    default: op
+  bettercompass.toggle:
+    default: op

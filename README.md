@@ -1,41 +1,55 @@
-[🇷🇺Прочитать на Русском](https://github.com/vewaclub/RMBNametags/blob/master/README_ru_ru.md) 
-# RMBNametags
- [![CodeFactor](https://www.codefactor.io/repository/github/vewaclub/rmbnametags/badge)](https://www.codefactor.io/repository/github/vewaclub/rmbnametags)
- [![Modrinth downloads](https://img.shields.io/modrinth/dt/rmbnametags)](https://modrinth.com/plugin/rmbnametags)
+# BetterCompass
+ [![CodeFactor](https://www.codefactor.io/repository/github/vewaclub/bettercompass/badge)](https://www.codefactor.io/repository/github/vewaclub/bettercompass)
+ [![Modrinth downloads](https://img.shields.io/modrinth/dt/bettercompass)](https://modrinth.com/plugin/bettercompass)
 
  
-[![Modrinth](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/0dbefc2fcbec362d14f1689acb807183ceffdbe1/modrinth.svg)](https://modrinth.com/plugin/rmbnametags)
+[![Modrinth](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/0dbefc2fcbec362d14f1689acb807183ceffdbe1/modrinth.svg)](https://modrinth.com/plugin/bettercompass)
 
 
-A simple Minecraft plugin to hide player names and show them on right-click in actionbar.
-PlaceholderAPI support include Relational placeholders.
+BetterCompass is a lightweight, configurable Spigot/Paper plugin that hides coordinates from the F3 debug screen and instead shows them neatly in the action bar when the player holds a compass — in either hand.
 
-![Nickname pops up in actionbar when you press rmb](https://cdn.modrinth.com/data/cached_images/3232f03c8108ea611b1bdf8b42e6ce3320641d7c.png)
+---
 
-### Config
+## ✨ Features
+
+- Hides coordinates from the F3 debug menu (`gamerule reducedDebugInfo`)
+- Displays coordinates (`X: Y: Z:`) in the **action bar** when holding a compass (main or off-hand)
+- Fully customizable action bar text format and colors
+- Commands to reload configuration and toggle F3 coordinates globally
+- Admin-only commands with configurable permissions
+- Lightweight and optimized for all modern Spigot/Paper versions (1.16+)
+
+---
+
+## 🔧 Commands
+
+| Command                 | Alias        | Description                                                |
+| ----------------------- | ------------ | ---------------------------------------------------------- |
+| `/bettercompass reload` | `/bc reload` | Reloads the config file  |
+| `/bettercompass on`     | `/bc on`     | Hides F3 coordinates globally  |
+| `/bettercompass off`    | `/bc off`    | Shows F3 coordinates globally  |
+
+
+---
+## 🧾 Default Configuration (`config.yml`)
 
 
 ```yml
-# display time in seconds (min 1s)
-display-time: 3
+# automatically hide coordinates on server start
+auto-hide-f3: true
 
-# Change nickname format here
-# Use & for colors or HEX (#RRGGBB) and {PLAYER_NAME} variable
-name-format: "&a&l{PLAYER_NAME}"
+actionbar:
+ enabled: true
 
-# If true, plugin will NOT show nametag when the target player is invisible
-respect-invisibility: false
+ # how often do you want coordinate updates (20 ticks = 1 second)
+ interval-ticks: 5
 
-# Where to display the nickname: "actionbar" (default) or "subtitle"
-display-location: "actionbar"
+ # actionbar message format (color codes support)
+ format: "&eX: &f{x}  &aY: &f{y}  &bZ: &f{z}"
 
-# Translations
-Messages:
- Reload: "&aRMBNametags config reloaded!"
- Not-Reload: "&cAn error occurred during a config reload"
 ```
 
 
 
-### bStats
-[![bStats Graph Data](https://bstats.org/signatures/bukkit/RMBNametags.svg)](https://bstats.org/plugin/bukkit/RMBNametags)
+## bStats
+[![bStats Graph Data](https://bstats.org/signatures/bukkit/BetterCompass.svg)](https://bstats.org/plugin/bukkit/BetterCompass/27925)
