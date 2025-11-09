@@ -8,6 +8,7 @@
 
 BetterCompass is a lightweight, configurable Spigot/Paper plugin that hides coordinates from the F3 debug screen and instead shows them neatly in the action bar when the player holds a compass — in either hand.
 
+![compass shows coords in actionbar](https://cdn.modrinth.com/data/mLdAjUef/images/6ba289bda31593824d1585aad12de404884273b5.png)
 ---
 
 ## ✨ Features
